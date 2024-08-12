@@ -1,8 +1,9 @@
 :root {
     --lightest-main-color: #DEA1F5;
-    --light-main-color: #3b2b5f;
-    --mid-main-color: #211738;
-    --dark-main-color: #0C1222;
+    --light-main-color: #7B5DBD;
+    --mid-main-color: #3b2b5f;
+    --dark-main-color: #211738;
+    --darkest-main-color: #0C1222;
 
     --box-shadow-light: #DEA1F5;
     --box-shadow-dark: #8472B2;
@@ -27,7 +28,7 @@
     --box-border-color: #404040;
 
     --font-stack: 'Inter', 'Roboto';
-    --mono-font-stack: 'Courier New', Courier, monospace;
+    --mono-font-stack: 'Roboto Mono', monospace;
 
     --anim-duration: 0.1s;
 }
@@ -35,7 +36,7 @@
 body {
     font-family: var(--font-stack);
     font-size: var(--font-size-14);
-    background-color: var(--dark-main-color);
+    background-color: var(--darkest-main-color);
     color: var(--text-color-lightest);
     margin: 0;
     padding: 0;
@@ -52,6 +53,10 @@ section h2 {
     font-family: var(--mono-font-stack);
     font-size: var(--font-size-32);
     text-align: center;
+}
+
+img {
+    user-select: none;
 }
 
 .intro {
@@ -74,18 +79,19 @@ section h2 {
     border-radius: 50%;
 }
 
-.intro-text h1 {
+.intro-text .name {
     margin: 0;
     font-family: var(--mono-font-stack);
-    font-size: var(--font-size-48);
+    font-size: var(--font-size-44);
+    font-weight: 600;
 }
 
-.intro-text .sm1 {
-    letter-spacing: -1px;
+.intro-text .name1 {
     font-size: var(--font-size-36);
+    letter-spacing: -1.2px;
 }
 
-.intro-text .sm2 {
+.intro-text .name2 {
     font-size: var(--font-size-36);
 }
 
@@ -100,7 +106,7 @@ section h2 {
 .intro-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 32px;
 }
 
 .intro-button {
@@ -108,29 +114,37 @@ section h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    height: 42px;
+    padding: 0;
+    width: 44px;
+    height: 44px;
     text-decoration: none;
     color: var(--lightest-main-color);
+    fill: var(--lightest-main-color);
     border-radius: 50%;
-    border: 3px solid var(--lightest-main-color);
-    padding: 0;
+    border: 3.6px solid;
+    border-color: var(--lightest-main-color);
+    box-shadow: 0 0 12px 0px var(--lightest-main-color);
     transition:
         transform var(--anim-duration),
         background-color var(--anim-duration),
         color var(--anim-duration),
+        fill var(--anim-duration),
+        border-color var(--anim-duration),
         box-shadow var(--anim-duration);
 }
 
 .intro-button:hover {
     transform: translateY(-6px);
     background-color: var(--lightest-main-color);
-    color: var(--light-main-color);
+    color: var(--text-color-lightest);
+    fill: var(--text-color-lightest);
+    border-color: var(--lightest-main-color);
     box-shadow: 0 0 16px 8px var(--lightest-main-color);
 }
 
-.intro-button i {
-    font-size: var(--font-size-26);
+.intro-button box-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .project {
@@ -150,7 +164,7 @@ section h2 {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    background: var(--mid-main-color);
+    background: var(--dark-main-color);
     border-radius: 16px;
     border: 3px solid var(--box-border-color);
     transition:
@@ -182,26 +196,34 @@ section h2 {
 .box-src {
     user-select: none;
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: var(--light-main-color);
-    color: var(--text-color-lightest);
-    padding: 8px 12px;
-    border-radius: 8px;
-    text-decoration: none;
     display: flex;
     align-items: center;
+    top: 0;
+    right: 0;
+    padding: 6px 12px;
+    border-radius: 8px;
     gap: 8px;
-    transition: background-color var(--anim-duration), color var(--anim-duration);
+    text-decoration: none;
+    background-color: var(--mid-main-color);
+    color: var(--text-color-lightest);
+    fill: var(--text-color-lightest);
+    font-weight: 500;
+    transition:
+        background-color var(--anim-duration),
+        color var(--anim-duration),
+        fill var(--anim-duration);
 }
 
-.box-src i {
-    font-size: var(--font-size-20);
+.box-src box-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: -2px;
 }
 
 .box-src:hover {
     background-color: var(--lightest-main-color);
-    color: var(--light-main-color);
+    color: var(--mid-main-color);
+    fill: var(--mid-main-color);
 }
 
 .box-title {
@@ -242,7 +264,7 @@ section h2 {
     user-select: none;
     padding: 4.6px 8px;
     border-radius: 8px;
-    background-color: var(--light-main-color);
+    background-color: var(--mid-main-color);
     color: var(--lightest-main-color);
     font-family: var(--font-stack);
     font-weight: 500;
@@ -252,7 +274,7 @@ section h2 {
 
 .box-rect-content:hover {
     background-color: var(--lightest-main-color);
-    color: var(--light-main-color);
+    color: var(--mid-main-color);
 }
 
 .work {
@@ -303,11 +325,14 @@ section h2 {
 
 .outro .intro-buttons {
     margin-bottom: 20px;
+    gap: 16px;
 }
 
 .outro .intro-button {
     width: 32px;
     height: 32px;
+    border: 2.6px solid var(--lightest-main-color);
+    box-shadow: 0 0 7px 0px var(--lightest-main-color);
 }
 
 .outro .intro-button:hover {
@@ -315,8 +340,9 @@ section h2 {
     box-shadow: 0 0 10px 3px var(--lightest-main-color);
 }
 
-.outro .intro-button i {
-    font-size: var(--font-size-20);
+.outro .intro-button box-icon {
+    width: 23px;
+    height: 23px;
 }
 
 footer {
