@@ -28,6 +28,7 @@
     --mono-font-stack: 'Roboto Mono', monospace;
 
     --anim-duration: 0.1s;
+    --long-anim-duration: 0.26s;
 }
 
 body {
@@ -48,16 +49,85 @@ section {
 section h2 {
     margin-bottom: 32px;
     text-align: center;
-    font-size: var(--font-size-32);
+    font-size: var(--font-size-28);
+}
+
+.line {
+    margin: 4px auto;
+    height: 4px;
+    width: 200px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--lightest-main-color), var(--light-main-color));
 }
 
 img {
     user-select: none;
 }
 
+.img-container {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    transition:
+        scale var(--long-anim-duration);
+}
+
+.img-container:hover {
+    scale: 110%;
+}
+
+.img-container img {
+    display: block;
+}
+
+.img-container::after, .img-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 2.6px);
+    height: calc(100% + 2.6px);
+    border-radius: 50%;
+    background-image: conic-gradient(
+        from var(--angle), 
+        red,
+        green,
+        blue,
+        red
+    );
+    z-index: -1; 
+    padding: 3px;
+    animation: 4.6s spin linear infinite;
+}
+
+.img-container::before {
+    filter: blur(1.2em);
+    opacity: 1;
+}
+
+.img-container:hover::after, .img-container:hover::before {
+    animation-duration: 1.36s;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
 .intro {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 26px;
     margin-bottom: 0;
 }
 
@@ -73,14 +143,6 @@ img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    transition:
-        scale var(--anim-duration),
-        filter var(--anim-duration);
-}
-
-.intro-image:hover {
-    scale: 120%;
-    filter: invert(100%);
 }
 
 .intro-text .name {
@@ -191,6 +253,10 @@ img {
     margin-bottom: 12px;
 }
 
+.box .img-container {
+    margin-bottom: 8px;
+}
+
 .box-image {
     width: 56px;
     height: 56px;
@@ -200,9 +266,19 @@ img {
         filter var(--anim-duration);
 }
 
-.box-image:hover {
-    scale: 120%;
-    filter: invert(100%);
+.box .img-container::after, .box .img-container::before {
+    width: calc(100% + 1.2px);
+    height: calc(100% + 1.2px);
+    animation: unset;
+}
+
+.box .img-container::before {
+    filter: blur(0.56em);
+    opacity: 1;
+}
+
+.box .img-container:hover::after, .box .img-container:hover::before {
+    animation: 2s spin linear infinite;
 }
 
 .box-src {
@@ -293,7 +369,7 @@ img {
     color: var(--mid-main-color);
 }
 
-.skills {
+/* .skills {
     margin-bottom: 20px;
 }
 
@@ -319,7 +395,7 @@ img {
 .skill-icon:hover {
     filter: grayscale(0%);
     transform: rotate(360deg);
-}
+} */
 
 .work {
     margin-bottom: 36px;
@@ -404,9 +480,9 @@ footer {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .skills-grid {
+    /* .skills-grid {
         grid-template-columns: auto auto auto auto auto;
-    }
+    } */
 
     .work-grid {
         grid-template-columns: 1fr;
@@ -414,13 +490,9 @@ footer {
 }
 
 @media (max-width: 800px) {
-    .intro-image:hover {
-        scale: 112%;
-    }
-
-    .skills-grid {
+    /* .skills-grid {
         grid-template-columns: auto auto auto auto;
-    }
+    } */
 }
 
 @media (max-width: 680px) {
@@ -430,7 +502,55 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .skills-grid {
+    /* .skills-grid {
         grid-template-columns: auto auto auto;
-    }
+    } */
+}
+
+.box .img-proj-5::after, .box .img-proj-5::before {
+    background-image: conic-gradient(
+        from var(--angle),
+        blue,
+        white,
+        red,
+        blue
+    );
+}
+
+.box .img-proj-4::after, .box .img-proj-4::before {
+    background-image: conic-gradient(
+        from var(--angle),
+        black,
+        red,
+        yellow,
+        black
+    );
+}
+
+.box .img-proj-3::after, .box .img-proj-3::before {
+    background-image: conic-gradient(
+        from var(--angle),
+        green,
+        white,
+        red,
+        green
+    );
+}
+
+.box .img-proj-2::after, .box .img-proj-2::before {
+    background-image: conic-gradient(
+        from var(--angle),
+        cyan,
+        red,
+        cyan
+    );
+}
+
+.box .img-proj-1::after, .box .img-proj-1::before {
+    background-image: conic-gradient(
+        from var(--angle),
+        black,
+        white,
+        black
+    );
 }
