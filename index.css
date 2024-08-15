@@ -404,6 +404,7 @@ img {
 }
 
 .box-title-link {
+    width: fit-content;
     text-decoration: none;
 }
 
@@ -597,6 +598,14 @@ img {
 }
 
 @media (max-width: 600px) {
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .intro-text {
+        margin: 0;
+    }
+
     /* .skills-grid {
         grid-template-columns: auto auto auto;
     } */
