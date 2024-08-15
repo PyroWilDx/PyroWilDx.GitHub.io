@@ -241,6 +241,28 @@ img {
     box-shadow: 0 0 8px 2px white;
 }
 
+#colorPicker::-moz-range-thumb {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    background: var(--lightest-main-color);
+    border: 3.6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px white;
+}
+
+#colorPicker::-ms-thumb {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    background: var(--lightest-main-color);
+    border: 3.6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px white;
+}
+
 #resetColorButton {
     user-select: none;
     cursor: pointer;
