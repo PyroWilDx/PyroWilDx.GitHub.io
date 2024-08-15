@@ -1,12 +1,13 @@
 :root {
     --lightest-main-color: #DEA1F5;
     --light-main-color: #7B5DBD;
-    --mid-main-color: #3b2b5f;
+    --mid-main-color: #3B2B5F;
     --dark-main-color: #211738;
     --darkest-main-color: #0C1222;
 
     --font-size-12: 12px;
     --font-size-14: 14px;
+    --font-size-16: 16px;
     --font-size-18: 18px;
     --font-size-20: 20px;
     --font-size-22: 22px;
@@ -22,6 +23,7 @@
     --text-color-lightest: #FFFFFF;
     --text-color-light: #EBEBEB;
     --text-color-mid: #DCDCDC;
+
     --box-border-color: #404040;
 
     --font-stack: 'Inter', 'Roboto';
@@ -167,6 +169,52 @@ img {
     font-size: var(--font-size-20);
     font-weight: 600;
     color: var(--text-color-light);
+}
+
+#colorPicker {
+    cursor: pointer;
+    width: 300px;
+    height: 10px;
+    margin-bottom: 16px;
+    appearance: none;
+    background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta, red);
+    border: 2px solid white;
+    border-radius: 16px;
+    box-shadow: 0 0 6px 1px white;
+}
+
+#colorPicker::-webkit-slider-thumb {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    background: var(--lightest-main-color);
+    border: 3.6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 2px white;
+}
+
+#resetColorButton {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 6px 12px;
+    font-size: var(--font-size-16);
+    font-weight: 500;
+    background-color: #DEA1F5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 8px 2px #DEA1F5;
+    transition:
+        background-color var(--long-anim-duration),
+        box-shadow var(--long-anim-duration);
+}
+
+#resetColorButton:hover {
+    background-color: #7B5DBD;
+    box-shadow: 0 0 12px 4px #7B5DBD;
 }
 
 .intro-buttons {
@@ -452,6 +500,7 @@ img {
 }
 
 .outro .intro-buttons {
+    margin-top: 4px;
     margin-bottom: 20px;
     gap: 16px;
 }
