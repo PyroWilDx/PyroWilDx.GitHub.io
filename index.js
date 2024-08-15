@@ -97,20 +97,18 @@ function arrToRgb(col) {
 
 const firstName = document.getElementById("firstName");
 const lastName = document.getElementById("lastName");
-const nameCursor = document.getElementById("nameCursor");
+setTimeout(() => {
+    typeText(firstName, "Pierre", () => {
+        typeText(lastName, "LIN");
+    });
+}, 600);
 
-function displayText(el, text, callback) {
+function typeText(el, text, callback) {
     const index = el.textContent.length;
     if (index < text.length) {
         el.textContent += text.charAt(index);
-        setTimeout(displayText, 100, el, text, callback);
+        setTimeout(typeText, 100, el, text, callback);
     } else if (callback) {
         callback();
     }
 }
-
-setTimeout(() => {
-    displayText(firstName, "Pierre", () => {
-        displayText(lastName, "LIN");
-    });
-}, 600);
