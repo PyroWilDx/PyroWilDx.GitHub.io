@@ -10,7 +10,7 @@ const boxRects = document.querySelectorAll(".box-rect-content");
 for (const boxRect of boxRects) {
     if (linkMap.has(boxRect.textContent)) {
         boxRect.href = linkMap.get(boxRect.textContent);
-        boxRect.target = '_blank';
+        boxRect.target = "_blank";
     }
 }
 
@@ -94,3 +94,23 @@ function hslToRgb(h, s, l) {
 function arrToRgb(col) {
     return "rgb(" + col[0] + ", " + col[1] + ", " + col[2] + ")";
 }
+
+const firstName = document.getElementById("firstName");
+const lastName = document.getElementById("lastName");
+const nameCursor = document.getElementById("nameCursor");
+
+function displayText(el, text, callback) {
+    const index = el.textContent.length;
+    if (index < text.length) {
+        el.textContent += text.charAt(index);
+        setTimeout(displayText, 100, el, text, callback);
+    } else if (callback) {
+        callback();
+    }
+}
+
+setTimeout(() => {
+    displayText(firstName, "Pierre", () => {
+        displayText(lastName, "LIN");
+    });
+}, 600);

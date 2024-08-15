@@ -20,9 +20,9 @@
     --font-size-44: 44px;
     --font-size-48: 48px;
 
-    --text-color-lightest: #FFFFFF;
-    --text-color-light: #EBEBEB;
-    --text-color-mid: #DCDCDC;
+    --lightest-text-color: #FFFFFF;
+    --light-text-color: #EBEBEB;
+    --mid-text-color: #DCDCDC;
 
     --box-border-color: #404040;
 
@@ -37,7 +37,7 @@ body {
     font-family: var(--font-stack);
     font-size: var(--font-size-14);
     background-color: var(--darkest-main-color);
-    color: var(--text-color-lightest);
+    color: var(--lightest-text-color);
     margin: 0;
     padding: 0;
 }
@@ -147,28 +147,74 @@ img {
     border-radius: 50%;
 }
 
+.intro-text {
+    text-align: left;
+    margin: 0;
+    margin-left: 16px;
+}
+
 .intro-text .name {
+    display: flex;
     margin: 0;
     font-family: var(--mono-font-stack);
     font-size: var(--font-size-44);
     font-weight: 600;
+    text-shadow:
+        0 0 2px var(--lightest-text-color),
+        0 0 8px var(--lightest-text-color),
+        0 0 30px var(--lightest-text-color);
 }
 
-.intro-text .name1 {
+.name p {
+    display: inline-block;
+}
+
+.intro-text #firstName::first-letter {
+    font-size: var(--font-size-48);
+    letter-spacing: -1.2px;
+}
+
+.intro-text #firstName {
     font-size: var(--font-size-36);
     letter-spacing: -1.2px;
 }
 
-.intro-text .name2 {
-    font-size: var(--font-size-36);
+.intro-text #lastName::first-letter {
+    font-size: var(--font-size-48);
+}
+
+.intro-text #lastName {
+    margin-left: 22px;
+    font-size: var(--font-size-40);
+}
+
+#nameCursor {
+    animation: blink 1s step-start infinite;
+    font-size: var(--font-size-48);
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .intro-text p {
-    margin: 6px 0;
+    margin: 4px 0;
     font-family: var(--mono-font-stack);
     font-size: var(--font-size-20);
     font-weight: 600;
-    color: var(--text-color-light);
+    color: var(--light-text-color);
+    text-shadow:
+        0 0 1px var(--light-text-color),
+        0 0 2px var(--light-text-color),
+        0 0 8px var(--light-text-color);
 }
 
 #colorPicker {
@@ -176,7 +222,7 @@ img {
     width: 300px;
     height: 10px;
     max-width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     appearance: none;
     background: linear-gradient(90deg, red, yellow, green, cyan, blue, magenta, red);
     border: 2px solid white;
@@ -196,26 +242,27 @@ img {
 }
 
 #resetColorButton {
+    user-select: none;
     cursor: pointer;
     display: block;
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
     padding: 6px 12px;
     font-size: var(--font-size-16);
     font-weight: 500;
-    background-color: #DEA1F5;
-    color: white;
+    background-color: #7B5DBD;
+    color: var(--lightest-text-color);
     border: none;
     border-radius: 6px;
-    box-shadow: 0 0 8px 2px #DEA1F5;
+    box-shadow: 0 0 8px 2px #7B5DBD;
     transition:
         background-color var(--long-anim-duration),
         box-shadow var(--long-anim-duration);
 }
 
 #resetColorButton:hover {
-    background-color: #7B5DBD;
-    box-shadow: 0 0 12px 4px #7B5DBD;
+    background-color: #DEA1F5;
+    box-shadow: 0 0 12px 4px #DEA1F5;
 }
 
 .intro-buttons {
@@ -251,8 +298,8 @@ img {
 .intro-button:hover {
     transform: translateY(-6px);
     background-color: var(--lightest-main-color);
-    color: var(--text-color-lightest);
-    fill: var(--text-color-lightest);
+    color: var(--lightest-text-color);
+    fill: var(--lightest-text-color);
     border-color: var(--lightest-main-color);
     box-shadow: 0 0 16px 8px var(--lightest-main-color);
 }
@@ -335,8 +382,8 @@ img {
     gap: 8px;
     text-decoration: none;
     background-color: var(--mid-main-color);
-    color: var(--text-color-lightest);
-    fill: var(--text-color-lightest);
+    color: var(--lightest-text-color);
+    fill: var(--lightest-text-color);
     font-weight: 500;
     transition:
         background-color var(--anim-duration),
@@ -361,13 +408,13 @@ img {
 }
 
 .box-year {
-    color: var(--text-color-mid);
+    color: var(--mid-text-color);
     margin-top: 6px;
     margin-bottom: 2px;
 }
 
 .box-desc {
-    color: var(--text-color-mid);
+    color: var(--mid-text-color);
     margin-bottom: 16px;
 }
 
@@ -412,7 +459,7 @@ img {
 .project .box-title {
     display: inline;
     font-size: var(--font-size-18);
-    color: var(--text-color-lightest);
+    color: var(--lightest-text-color);
     transition:
         color var(--anim-duration);
 }
@@ -462,7 +509,7 @@ img {
     display: inline;
     margin: 0;
     font-size: var(--font-size-18);
-    color: var(--text-color-lightest);
+    color: var(--lightest-text-color);
 }
 
 .work .box-title:hover {
@@ -495,9 +542,9 @@ img {
 .outro {
     padding: 20px;
     margin-top: 20px;
-    border-top: 2px solid var(--text-color-light);
+    border-top: 2px solid var(--light-text-color);
     text-align: center;
-    color: var(--text-color-light);
+    color: var(--light-text-color);
 }
 
 .outro .intro-buttons {
