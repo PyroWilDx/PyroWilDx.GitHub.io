@@ -1,5 +1,5 @@
 const linkMap = new Map([
-    ["C", "https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.html"],
+    ["C", "https://www.open-std.org/jtc1/sc22/wg14/"],
     ["C++", "https://isocpp.org/"],
     ["Java", "https://www.java.com/"],
     ["TypeScript", "https://www.typescriptlang.org/"],
