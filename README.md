@@ -6,6 +6,10 @@
 
 <div align="center">
 
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="60"/>](https://www.w3.org/html/)
+<img width="16"/>
+[<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="60"/>](https://www.w3.org/Style/CSS/)
+<img width="16"/>
 [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="60"/>](https://developer.mozilla.org/docs/Web/JavaScript/)
 <img width="16"/>
 [<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="60"/>](https://code.visualstudio.com/)

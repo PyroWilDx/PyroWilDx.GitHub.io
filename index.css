@@ -633,60 +633,11 @@ img {
     } */
 }
 
-.box .img-proj-6::after, .box .img-proj-6::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        red,
-        white,
-        black,
-        red
-    );
-}
-
-.box .img-proj-5::after, .box .img-proj-5::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        blue,
-        white,
-        red,
-        blue
-    );
-}
-
-.box .img-proj-4::after, .box .img-proj-4::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        black,
-        red,
-        yellow,
-        black
-    );
-}
-
-.box .img-proj-3::after, .box .img-proj-3::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        green,
-        white,
-        red,
-        green
-    );
-}
-
-.box .img-proj-2::after, .box .img-proj-2::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        cyan,
-        red,
-        cyan
-    );
-}
-
-.box .img-proj-1::after, .box .img-proj-1::before {
+/* .box .img-proj-1::after, .box .img-proj-1::before {
     background-image: conic-gradient(
         from var(--angle),
         black,
         white,
         black
     );
-}
+} */
