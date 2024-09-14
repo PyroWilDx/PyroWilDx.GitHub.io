@@ -1,6 +1,6 @@
 # PyroWilDx.GitHub.io
 
-**PyroWilDx.GitHub.io** is my current portfolio website, it can be accessed [Here](https://pyrowildx.github.io/index.html).
+[**PyroWilDx.GitHub.io**](https://github.com/PyroWilDx/PyroWilDx.GitHub.io/) is my current portfolio website, it can be accessed [Here](https://pyrowildx.github.io/index.html).
 
 ## Development Set-Up
 
@@ -22,7 +22,7 @@
 
 ### How To Use
 
-- Run [```index.html```](./index.html) w/ Live Server
+- Run [```index.html```](./index.html) w/ Live Server.
 
 ---
 
