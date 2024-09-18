@@ -82,7 +82,8 @@ img {
     display: block;
 }
 
-.img-container::after, .img-container::before {
+.img-container::after,
+.img-container::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -91,14 +92,12 @@ img {
     width: calc(100% + 2.6px);
     height: calc(100% + 2.6px);
     border-radius: 50%;
-    background-image: conic-gradient(
-        from var(--angle), 
-        red,
-        green,
-        blue,
-        red
-    );
-    z-index: -1; 
+    background-image: conic-gradient(from var(--angle),
+            red,
+            green,
+            blue,
+            red);
+    z-index: -1;
     padding: 3px;
     animation: 3.42s spin linear infinite;
 }
@@ -122,6 +121,7 @@ img {
     from {
         --angle: 0deg;
     }
+
     to {
         --angle: 360deg;
     }
@@ -153,6 +153,7 @@ img {
     0% {
         transform: rotate(360deg);
     }
+
     100% {
         transform: rotate(0deg);
     }
@@ -208,9 +209,11 @@ img {
     0% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -384,7 +387,8 @@ img {
         filter var(--anim-duration);
 }
 
-.box .img-container::after, .box .img-container::before {
+.box .img-container::after,
+.box .img-container::before {
     width: calc(100% + 1.2px);
     height: calc(100% + 1.2px);
     animation: unset;
@@ -395,7 +399,8 @@ img {
     opacity: 1;
 }
 
-.box:hover .img-container::after, .box:hover .img-container::before {
+.box:hover .img-container::after,
+.box:hover .img-container::before {
     animation: 2.6s spin linear infinite;
 }
 
@@ -539,6 +544,15 @@ img {
     border-radius: 32px;
 }
 
+.work-img-container {
+    transition:
+        scale var(--long-anim-duration);
+}
+
+.work-img-container {
+    scale: 110%;
+}
+
 .work .box-title {
     display: inline;
     margin: 0;
@@ -565,7 +579,7 @@ img {
 .work-company:hover {
     text-decoration: underline;
 }
-  
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -644,11 +658,22 @@ img {
     } */
 }
 
-/* .box .img-proj-1::after, .box .img-proj-1::before {
-    background-image: conic-gradient(
-        from var(--angle),
-        black,
-        white,
-        black
-    );
+/* .box .img-proj-1::after,
+.box .img-proj-1::before {
+    background-image: conic-gradient(from var(--angle),
+            black,
+            white,
+            black);
 } */
+
+/* .box .img-work-1::after,
+.box .img-work-1::before {
+    background-image: none;
+    background-color: white;
+} */
+
+.box .img-work-1::after,
+.box .img-work-1::before {
+    background-image: none;
+    background-color: rgb(48, 170, 226);
+}
