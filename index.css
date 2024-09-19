@@ -581,6 +581,10 @@ img {
     text-decoration: underline;
 }
 
+.work .box-desc {
+    color: var(--lightest-text-color);
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -12,9 +12,6 @@ const linkMap = new Map([
     ["ThreeJs", "https://threejs.org/"],
     ["AVX2", "https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#/"],
     ["CMake", "https://cmake.org/"],
-    ["Make", "https://www.gnu.org/software/make/"],
-    ["Node", "https://nodejs.org/"],
-    ["Maven", "https://maven.apache.org/"],
     ["Android Studio", "https://developer.android.com/studio/"],
 ]);
 
