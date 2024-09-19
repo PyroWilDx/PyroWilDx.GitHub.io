@@ -89,17 +89,17 @@ img {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% + 2.6px);
-    height: calc(100% + 2.6px);
+    width: calc(100%);
+    height: calc(100%);
+    padding: 5.06px;
     border-radius: 50%;
     background-image: conic-gradient(from var(--angle),
-            red,
-            green,
-            blue,
-            red);
+            #00FFFF,
+            #FF00FF,
+            #FFFF00,
+            #00FFFF);
     z-index: -1;
-    padding: 3px;
-    animation: 3.42s spin linear infinite;
+    animation: 4.2s spin linear infinite;
 }
 
 .img-container::before {
@@ -113,7 +113,7 @@ img {
 
 @property --angle {
     syntax: "<angle>";
-    initial-value: 0deg;
+    initial-value: 45deg;
     inherits: false;
 }
 
@@ -389,8 +389,9 @@ img {
 
 .box .img-container::after,
 .box .img-container::before {
-    width: calc(100% + 1.2px);
-    height: calc(100% + 1.2px);
+    width: calc(100%);
+    height: calc(100%);
+    padding: 3.6px;
     animation: unset;
 }
 
@@ -661,10 +662,83 @@ img {
 /* .box .img-proj-1::after,
 .box .img-proj-1::before {
     background-image: conic-gradient(from var(--angle),
-            black,
-            white,
-            black);
+            #FF0000,
+            #00FF00,
+            #0000FF,
+            #FF0000);
 } */
+
+.box .img-proj-1::after,
+.box .img-proj-1::before {
+    background-image: conic-gradient(from var(--angle),
+            #F945B0,
+            #2AC1FD,
+            #F945B0);
+}
+
+.box .img-proj-2::after,
+.box .img-proj-2::before {
+    background-image: conic-gradient(from var(--angle),
+            #ACE916,
+            #5316E9,
+            #ACE916);
+}
+
+.box .img-proj-3::after,
+.box .img-proj-3::before {
+    background-image: conic-gradient(from var(--angle),
+            #22DD8F,
+            #DD2270,
+            #22DD8F);
+}
+
+.box .img-proj-4::after,
+.box .img-proj-4::before {
+    background-image: conic-gradient(from var(--angle),
+            #808080,
+            #FFFFFF,
+            #808080);
+}
+
+.box .img-proj-5::after,
+.box .img-proj-5::before {
+    background-image: conic-gradient(from var(--angle),
+            #FFAD00,
+            #0052FF,
+            #FFAD00);
+}
+
+.box .img-proj-6::after,
+.box .img-proj-6::before {
+    background-image: conic-gradient(from var(--angle),
+            #FFFA00,
+            #0005FF,
+            #FFFA00);
+}
+
+.box .img-proj-7::after,
+.box .img-proj-7::before {
+    background-image: conic-gradient(from var(--angle),
+            #7FFF00,
+            #8000FF,
+            #7FFF00);
+}
+
+.box .img-proj-8::after,
+.box .img-proj-8::before {
+    background-image: conic-gradient(from var(--angle),
+            #49F3F3,
+            #F34949,
+            #49F3F3);
+}
+
+.box .img-proj-9::after,
+.box .img-proj-9::before {
+    background-image: conic-gradient(from var(--angle),
+            #E800FF,
+            #17FF00,
+            #E800FF);
+}
 
 /* .box .img-work-1::after,
 .box .img-work-1::before {
@@ -675,5 +749,23 @@ img {
 .box .img-work-1::after,
 .box .img-work-1::before {
     background-image: none;
-    background-color: rgb(48, 170, 226);
+    background-color: #3487FF;
+}
+
+.box .img-work-2::after,
+.box .img-work-2::before {
+    background-image: none;
+    background-color: #73FBFD;
+}
+
+.box .img-work-3::after,
+.box .img-work-3::before {
+    background-image: none;
+    background-color: #75FA61;
+}
+
+.box .img-work-4::after,
+.box .img-work-4::before {
+    background-image: none;
+    background-color: #73FBFD;
 }
