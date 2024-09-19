@@ -1,27 +1,14 @@
-const linkMap = new Map([
-    ["C", "https://www.open-std.org/jtc1/sc22/wg14/"],
-    ["C++", "https://isocpp.org/"],
-    ["Java", "https://www.java.com/"],
-    ["TypeScript", "https://www.typescriptlang.org/"],
-    ["Python", "https://www.python.org/"],
-    ["Unreal Engine", "https://www.unrealengine.com/"],
-    ["Qt6", "https://www.qt.io/"],
-    ["OpenGL", "https://www.opengl.org/"],
-    ["SDL2", "https://www.libsdl.org/"],
-    ["Boost", "https://www.boost.org/"],
-    ["ThreeJs", "https://threejs.org/"],
-    ["AVX2", "https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#/"],
-    ["CMake", "https://cmake.org/"],
-    ["Android Studio", "https://developer.android.com/studio/"],
-]);
+// const linkMap = new Map([
+//     // ["Tech", "Link"]
+// ]);
 
-const boxRects = document.querySelectorAll(".box-rect-content");
-for (const boxRect of boxRects) {
-    if (linkMap.has(boxRect.textContent)) {
-        boxRect.href = linkMap.get(boxRect.textContent);
-        boxRect.target = "_blank";
-    }
-}
+// const boxRects = document.querySelectorAll(".box-rect-content");
+// for (const boxRect of boxRects) {
+//     if (linkMap.has(boxRect.textContent)) {
+//         boxRect.href = linkMap.get(boxRect.textContent);
+//         boxRect.target = "_blank";
+//     }
+// }
 
 const colorPicker = document.getElementById("colorPicker");
 colorPicker.addEventListener("input", () => {
@@ -226,8 +213,8 @@ function getTriadicColors(color0) {
 
 function generateRandomLightColor() {
     let h = Math.floor(Math.random() * 360);
-    let s = Math.floor(Math.random() * 40) + 40;
-    let l = Math.floor(Math.random() * 20) + 70;
+    let s = 100;
+    let l = 50;
 
     return { h, s, l };
 }
@@ -247,12 +234,12 @@ function setConicGradient(className, colorList) {
     bgImage += ");";
     console.log(bgImage)
     styleSheet.insertRule(`
-        .img-container::after {
+        .${className}::after {
             ${bgImage}
         }
         `, styleSheet.cssRules.length);
     styleSheet.insertRule(`
-        .img-container::before {
+        .${className}::before {
             ${bgImage}
         }
         `, styleSheet.cssRules.length);

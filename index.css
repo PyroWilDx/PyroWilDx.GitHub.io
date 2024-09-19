@@ -123,11 +123,11 @@ img {
 
 @keyframes spin {
     from {
-        --angle: 0deg;
+        --angle: 45deg;
     }
 
     to {
-        --angle: 360deg;
+        --angle: 405deg;
     }
 }
 
@@ -471,6 +471,7 @@ img {
 
 .box-rect-content {
     user-select: none;
+    cursor: default;
     padding: 4.6px 8px;
     border-radius: 8px;
     text-decoration: none;
@@ -676,72 +677,72 @@ img {
             #FF0000);
 } */
 
-.box .img-proj-1::after,
-.box .img-proj-1::before {
+.box .img-proj-Vectorized-FFT::after,
+.box .img-proj-Vectorized-FFT::before {
     background-image: conic-gradient(from var(--angle),
-            #F945B0,
-            #2AC1FD,
-            #F945B0);
+            #DD2270,
+            #22DD8F,
+            #DD2270);
 }
 
-.box .img-proj-2::after,
-.box .img-proj-2::before {
+.box .img-proj-GUI-Library::after,
+.box .img-proj-GUI-Library::before {
     background-image: conic-gradient(from var(--angle),
             #ACE916,
             #5316E9,
             #ACE916);
 }
 
-.box .img-proj-3::after,
-.box .img-proj-3::before {
-    background-image: conic-gradient(from var(--angle),
-            #22DD8F,
-            #DD2270,
-            #22DD8F);
-}
-
-.box .img-proj-4::after,
-.box .img-proj-4::before {
-    background-image: conic-gradient(from var(--angle),
-            #808080,
-            #FFFFFF,
-            #808080);
-}
-
-.box .img-proj-5::after,
-.box .img-proj-5::before {
-    background-image: conic-gradient(from var(--angle),
-            #FFAD00,
-            #0052FF,
-            #FFAD00);
-}
-
-.box .img-proj-6::after,
-.box .img-proj-6::before {
-    background-image: conic-gradient(from var(--angle),
-            #FFFA00,
-            #0005FF,
-            #FFFA00);
-}
-
-.box .img-proj-7::after,
-.box .img-proj-7::before {
-    background-image: conic-gradient(from var(--angle),
-            #7FFF00,
-            #8000FF,
-            #7FFF00);
-}
-
-.box .img-proj-8::after,
-.box .img-proj-8::before {
+.box .img-proj-Project-OpenGL::after,
+.box .img-proj-Project-OpenGL::before {
     background-image: conic-gradient(from var(--angle),
             #49F3F3,
             #F34949,
             #49F3F3);
 }
 
-.box .img-proj-9::after,
-.box .img-proj-9::before {
+.box .img-proj-OreSnafu::after,
+.box .img-proj-OreSnafu::before {
+    background-image: conic-gradient(from var(--angle),
+            #F945B0,
+            #2AC1FD,
+            #F945B0);
+}
+
+.box .img-proj-PyroWilDx-3d::after,
+.box .img-proj-PyroWilDx-3d::before {
+    background-image: conic-gradient(from var(--angle),
+            #FFAD00,
+            #0052FF,
+            #FFAD00);
+}
+
+.box .img-proj-EatWars::after,
+.box .img-proj-EatWars::before {
+    background-image: conic-gradient(from var(--angle),
+            #FFFA00,
+            #0005FF,
+            #FFFA00);
+}
+
+.box .img-proj-WinBlitz::after,
+.box .img-proj-WinBlitz::before {
+    background-image: conic-gradient(from var(--angle),
+            #7FFF00,
+            #8000FF,
+            #7FFF00);
+}
+
+.box .img-proj-Deca-Compiler::after,
+.box .img-proj-Deca-Compiler::before {
+    background-image: conic-gradient(from var(--angle),
+            #FFFFFF,
+            #808080,
+            #FFFFFF);
+}
+
+.box .img-proj-KeqEngine::after,
+.box .img-proj-KeqEngine::before {
     background-image: conic-gradient(from var(--angle),
             #E800FF,
             #17FF00,
