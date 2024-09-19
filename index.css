@@ -42,6 +42,10 @@ body {
     padding: 0;
 }
 
+a {
+    color: #4493F8;
+}
+
 section {
     padding: 20px;
     max-width: 1200px;
