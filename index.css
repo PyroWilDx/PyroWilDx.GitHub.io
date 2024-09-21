@@ -677,6 +677,14 @@ img {
             #FF0000);
 } */
 
+.box .img-proj-OreSnafu::after,
+.box .img-proj-OreSnafu::before {
+    background-image: conic-gradient(from var(--angle),
+            #F945B0,
+            #2AC1FD,
+            #F945B0);
+}
+
 .box .img-proj-Vectorized-FFT::after,
 .box .img-proj-Vectorized-FFT::before {
     background-image: conic-gradient(from var(--angle),
@@ -693,28 +701,20 @@ img {
             #ACE916);
 }
 
-.box .img-proj-Project-OpenGL::after,
-.box .img-proj-Project-OpenGL::before {
-    background-image: conic-gradient(from var(--angle),
-            #49F3F3,
-            #F34949,
-            #49F3F3);
-}
-
-.box .img-proj-OreSnafu::after,
-.box .img-proj-OreSnafu::before {
-    background-image: conic-gradient(from var(--angle),
-            #F945B0,
-            #2AC1FD,
-            #F945B0);
-}
-
 .box .img-proj-PyroWilDx-3d::after,
 .box .img-proj-PyroWilDx-3d::before {
     background-image: conic-gradient(from var(--angle),
             #FFAD00,
             #0052FF,
             #FFAD00);
+}
+
+.box .img-proj-Project-OpenGL::after,
+.box .img-proj-Project-OpenGL::before {
+    background-image: conic-gradient(from var(--angle),
+            #49F3F3,
+            #F34949,
+            #49F3F3);
 }
 
 .box .img-proj-EatWars::after,
