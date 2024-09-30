@@ -18,20 +18,29 @@ colorPicker.addEventListener("input", () => {
     }
 
     const lightestMainColor = hslToRgb((colorPicker.value / 100) * 360, 100, 50);
-    const lightMainColor = [lightestMainColor[0] * (123 / 222),
-    lightestMainColor[1] * (93 / 161),
-    lightestMainColor[2] * (189 / 245)];
-    const midMainColor = [lightestMainColor[0] * (59 / 222),
-    lightestMainColor[1] * (43 / 161),
-    lightestMainColor[2] * (95 / 245)];
-    const darkMainColor = [lightestMainColor[0] * (33 / 222),
-    lightestMainColor[1] * (23 / 161),
-    lightestMainColor[2] * (56 / 245)];
+    const lightMainColor =
+        [lightestMainColor[0] * (123 / 222),
+        lightestMainColor[1] * (93 / 161),
+        lightestMainColor[2] * (189 / 245)];
+    const midMainColor =
+        [lightestMainColor[0] * (59 / 222),
+        lightestMainColor[1] * (43 / 161),
+        lightestMainColor[2] * (95 / 245)];
+    const darkMainColor =
+        [lightestMainColor[0] * (33 / 222),
+        lightestMainColor[1] * (23 / 161),
+        lightestMainColor[2] * (56 / 245)];
 
     document.documentElement.style.setProperty("--lightest-main-color", arrToRgb(lightestMainColor));
     document.documentElement.style.setProperty("--light-main-color", arrToRgb(lightMainColor));
     document.documentElement.style.setProperty("--mid-main-color", arrToRgb(midMainColor));
     document.documentElement.style.setProperty("--dark-main-color", arrToRgb(darkMainColor));
+
+    const imgProjBorderColor =
+        [lightestMainColor[0] * (159 / 222),
+        lightestMainColor[1] * (116 / 161),
+        lightestMainColor[2] * (176 / 245)];
+    document.documentElement.style.setProperty("--img-proj-border-color", arrToRgb(imgProjBorderColor));
 });
 
 const resetColorButton = document.getElementById("resetColorButton");
@@ -42,6 +51,8 @@ resetColorButton.addEventListener("click", () => {
     document.documentElement.style.setProperty("--light-main-color", "#7B5DBD");
     document.documentElement.style.setProperty("--mid-main-color", "#3B2B5F");
     document.documentElement.style.setProperty("--dark-main-color", "#211738");
+
+    document.documentElement.style.setProperty("--img-proj-border-color", "#9F74B0");
 });
 
 const firstName = document.getElementById("firstName");
