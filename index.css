@@ -395,12 +395,12 @@ img {
 .box .img-container::before {
     width: calc(100%);
     height: calc(100%);
-    padding: 3.6px;
+    padding: 2.6px;
     animation: unset;
 }
 
 .box .img-container::before {
-    filter: blur(0.26em);
+    filter: blur(0.28em);
     opacity: 1;
 }
 
