@@ -13,6 +13,8 @@
 
 ### How To Use
 
+- Install [Live Server](https://github.com/ritwickdey/vscode-live-server/) on VSCode.
+
 - Run [```index.html```](./index.html) w/ Live Server.
 
 ---
